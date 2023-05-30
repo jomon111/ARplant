@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width"/>
+    <!-- A-Frame を読み込む -->
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <!-- AR.js を読み込む -->
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>TEST</title>
+  </head>
+
+  <body style="margin: 0; overflow: hidden">
+    <div class="buttons">
+      <button class="say-hi-button">SAY HI</button>
+    </div>
+    <a-scene
+      arjs
+      embedded
+      vr-mode-ui="enabled: false"
+      gesture-detector
+    >
+      <!-- 3DCGモデルを読み込む -->
+      <a-assets>
+        <a-asset-item id="fish" src="./assets/fish.glb"></a-asset-item>
+        <a-asset-item id="plant" src="./assets/plant.glb"></a-asset-item>
+      </a-assets>
+
+      <!-- マーカーの.pattファイルを読み込む -->
+      <a-marker 
+        type="pattern" 
+        url="./assets/fish.patt"
+        emitevents="true"
+      >
+        <!-- 3Dモデルを呼び出す -->
+        <a-entity 
+          gltf-model="#fish" 
+          scale="0.5 0.5 0.5"
+        ></a-entity>
+      </a-marker>
+      <a-marker 
+        type="pattern" 
+        url="./assets/plant.patt"
+        emitevents="true"
+      >
+        <!-- 3Dモデルを呼び出す -->
+        <a-entity 
+          gltf-model="#plant" 
+          scale="10 10 10 "
+        ></a-entity>
+      </a-marker>
+      <!-- カメラを追加 -->
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>
