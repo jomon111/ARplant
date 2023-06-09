@@ -25,6 +25,7 @@
       <a-assets>
         <a-asset-item id="fish" src="./assets/fish.glb"></a-asset-item>
         <a-asset-item id="plant" src="./assets/plant.glb"></a-asset-item>
+        <a-asset-item id="plant2" src="./assets/plant2.glb"></a-asset-item>
       </a-assets>
 
       <!-- マーカーの.pattファイルを読み込む -->
@@ -39,6 +40,7 @@
           scale="0.5 0.5 0.5"
         ></a-entity>
       </a-marker>
+
       <a-marker 
         type="pattern" 
         url="./assets/plant.patt"
@@ -50,6 +52,19 @@
           scale="0.8 0.8 0.8 "
         ></a-entity>
       </a-marker>
+      
+      <a-marker 
+      type="pattern" 
+      url="./assets/plant2.patt"
+      emitevents="true"
+    >
+      <!-- 3Dモデルを呼び出す -->
+      <a-entity 
+        gltf-model="#plant2" 
+        scale="0.8 0.8 0.8 "
+      ></a-entity>
+    </a-marker>
+
       <!-- カメラを追加 -->
       <a-entity camera></a-entity>
     </a-scene>
