@@ -21,18 +21,18 @@
       <!-- 3Dモデルとマーカーの設定 -->
       <a-assets>
         <a-asset-item id="fish" src="./assets/fish.glb"></a-asset-item>
-        <a-asset-item id="plant" src="./assets/plant.glb"></a-asset-item>
+        <!-- <a-asset-item id="plant" src="./assets/plant.glb"></a-asset-item> -->
         <a-asset-item id="plant2" src="./assets/plant2.glb"></a-asset-item>
         <a-marker
           type="pattern"
           url="./assets/fish.patt"
           emitevents="true"
         ></a-marker>
-        <a-marker
+<!--         <a-marker
           type="pattern"
           url="./assets/plant.patt"
           emitevents="true"
-        ></a-marker>
+        ></a-marker> -->
         <a-marker
           type="pattern"
           url="./assets/plant2.patt"
@@ -46,11 +46,11 @@
         scale="0.5 0.5 0.5"
         marker="type: pattern; url: ./assets/fish.patt"
       ></a-entity>
-      <a-entity
+<!--       <a-entity
         gltf-model="#plant"
         scale="0.8 0.8 0.8"
         marker="type: pattern; url: ./assets/plant.patt"
-      ></a-entity>
+      ></a-entity> -->
       <a-entity
         gltf-model="#plant2"
         scale="0.8 0.8 0.8"
